@@ -1,0 +1,233 @@
+/* Reset básico */
+body, h1, h2, p, ul, li, a, form, input, button, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Estilos gerais */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seção Home */
+.banner {
+    text-align: center;
+    padding: 2em;
+    background-color: #f0f0f0;
+}
+
+.banner h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Seção Produtos */
+#produtos {
+    padding: 2em;
+    text-align: center;
+}
+
+#produtos h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.galeria .item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.galeria .item:hover {
+    transform: scale(1.05);
+}
+
+.galeria .item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+/* Seção Contato */
+#contato {
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+#contato form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#contato input, #contato textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contato button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.8em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contato button:hover {
+    background-color: #444;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #000;
+    color: #fff;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: black;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* GALERIA */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+
+    /* MENU */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: black;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    /* GALERIA MOBILE */
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    /* TEXTO */
+    h2 {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .banner p {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}

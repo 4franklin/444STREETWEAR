@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>444STREETWEAR</title>
+    <link rel="stylesheet" href="STY.CSS">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>444STREETWEAR</h1>
+        </div>
+    
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+        <nav id="menu">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#produtos">PEÇAS</a></li>
+                <li><a href="#contato">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="banner">
+            <h2>444STREETWEAR</h2>
+            <p>STYLE. ATTITUDE. POWER.</p>
+            <a href="#produtos" class="btn">VER COLEÇÃO</a>
+        </div>
+    </section>
+
+    <section id="produtos">
+        <h2>NOSSAS PEÇAS</h2>
+        <div class="galeria">
+            <div class="item" onclick="openModal('Wall StoriesWTF.png','Wall StoriesWTB.png')">
+                <img src="Wall StoriesWTF.png" alt="Produto">
+                <p>WALL STORIES WHITE T-SHIRT
+                    REGULAR - 950 MT
+                    OVERSIZED- 1500 MT</p>
+                <button onclick="addToCart('WALL STORIES WHITE T-SHIRT', 1500)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('Wall Stories BKF.png','Wall StoriesBKB.png')">
+                <img src="Wall Stories BKF.png" alt="Produto">
+                <p>WALL STORIES BLACK T-SHIRT
+                    REGULAR - 950 MT
+                    OVERSIZED- 1500 MT</p>
+                <button onclick="addToCart('WALL STORIES BLACK T-SHIRT', 1500)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('RULES.png',)">
+                <img src="RULES.png" alt="Produto">
+                <p>STREET SYMBOLS CAP - 599MT</p>
+                <button onclick="addToCart('STREET SYMBOLS CAP', 599)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('THE STREET.png',)">
+                <img src="THE STREETS.png" alt="Produto">
+                <p>STREET POWER CAP - 599 MT</p>
+                <button onclick="addToCart('STREET POWER CAP', 599)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('LIFESTYLE.png',)">
+                <img src="LIFESTYLE.png" alt="Produto">
+                <p>CITY LIFE CAP - 599 MT</p>
+                <button onclick="addToCart('CITY LIFE CAP', 599)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('NO LIMITS.png',)">
+                <img src="NO LIMITS.png" alt="Produto">
+                <p>NO LIMITS CAP - 599 MT</p>
+                <button onclick="addToCart('NO LIMITS CAP', 599)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('ATIRUDE.png',)">
+                <img src="ATIRUDE.png" alt="Produto">
+                <p>ATTITUDE CAP - 599 MT</p>
+                <button onclick="addToCart('ATTITUDE CAP', 599)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('PEACE FRNT.png','PEACE BACK.png')">
+                <img src="PEACE FRNT.png" alt="Produto">
+                <p>PEACE T-SHIRT
+                    REGULAR - 950 MT
+                    OVERSIZED- 1500 MT</p>
+                <button onclick="addToCart('PEACE T-SHIRT', 1500)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('REAL FROT.png','REAL BACK.png')">
+                <img src="REAL FROT.png" alt="Produto">
+                <p>REAL NIGGA NEVER DIE T-SHIRT
+                    REGULAR - 950 MT
+                    OVERSIZED- 1500 MT</p>
+                <button onclick="addToCart('REAL NIGGA NEVER DIE T-SHIRT', 1500)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('CLOSE FRONT.png','CLOSE BACK.png')">
+                <img src="CLOSE FRONT.png" alt="Produto">
+                <p>CLOSE MY EYES T-SHIRT
+                    REGULAR - 950 MT
+                    OVERSIZED- 1500 MT</p>
+                <button onclick="addToCart('CLOSE MY EYES T-SHIRT', 1500)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('IDPDC FRONT.png','IDPDC BACK.png')">
+                <img src="IDPDC FRONT.png" alt="Produto">
+                <p>INDEPENDENCE T-SHIRT
+                    REGULAR - 950 MT
+                    OVERSIZED- 1500 MT</p>
+                <button onclick="addToCart('INDEPENDENCE T-SHIRT', 1500)">Adicionar</button>
+            </div>
+            <div class="item" onclick="openModal('INE FRONT.png','INE BACK.png')">
+                <img src="INE FRONT.png" alt="Produto">
+                <p>INEFFABLE T-SHIRT
+                    REGULAR - 950 MT
+                    OVERSIZED- 1500 MT</p>
+                <button onclick="addToCart('INEFFABLE-SHIRT', 1500)">Adicionar</button>
+            </div>
+            
+        </div>
+    </section>
+    </div>
+    <section id="carrinho">
+        <h2>🛒 Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <h3>Total: <span id="total">0</span> MT</h3>
+    
+        <button onclick="checkout()">Finalizar no WhatsApp</button>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 444STREETWEAR. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+        </script>
+
+<script>
+    let cart = [];
+    
+    function addToCart(nome, preco) {
+        cart.push({ nome, preco });
+        updateCart();
+    }
+    
+    function updateCart() {
+        const lista = document.getElementById("cart-items");
+        const total = document.getElementById("total");
+    
+        lista.innerHTML = "";
+        let soma = 0;
+    
+        cart.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.nome} - ${item.preco} MT`;
+            lista.appendChild(li);
+            soma += item.preco;
+        });
+    
+        total.textContent = soma;
+    }
+    
+    function checkout() {
+        let mensagem = "🛒 Pedido 444STREETWEAR:%0A";
+    
+        cart.forEach(item => {
+            mensagem += `- ${item.nome} (${item.preco} MT)%0A`;
+        });
+    
+        mensagem += `%0ATotal: ${document.getElementById("total").textContent} MT`;
+    
+        window.open(`https://wa.me/258867335175?text=${mensagem}`);
+    }
+    </script>
+
+<script>
+    function checkout() {
+        let mensagem = "🛒 *Pedido 444STREETWEAR*%0A%0A";
+    
+        cart.forEach(item => {
+            mensagem += `- ${item.nome} (${item.preco} MT)%0A`;
+        });
+    
+        const total = document.getElementById("total").textContent;
+    
+        mensagem += `%0A💰 Total: ${total} MT%0A`;
+        mensagem += `%0A📲 Pagamento por M-Pesa ou e-Mola:%0A`;
+        mensagem += `Número: 845714494%0A`;
+        mensagem += `Nome: AISEL FRANKLIN%0A`;
+        mensagem += `Número: 867335175%0A`;
+        mensagem += `Nome: AISEL FRANKLIN%0A`;
+        mensagem += `%0A📩 Envie o comprovativo aqui`;
+    
+        window.open(`https://wa.me/258867335175?text=${mensagem}`);
+    }
+    </script>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="img1">
+        <img id="img2">
+    </div>
+    <script>
+        function openModal(img1, img2) {
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("img1").src = img1;
+            document.getElementById("img2").src = img2;
+        }
+        
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+        </script>
+</body>
+</html>
